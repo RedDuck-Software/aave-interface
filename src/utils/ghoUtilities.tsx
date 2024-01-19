@@ -13,6 +13,7 @@ export const GHO_SUPPORTED_MARKETS = [
   'fork_proto_mainnet_v3',
   'proto_sepolia_v3',
   'fork_proto_sepolia_v3',
+  'my_test_sepolia',
 ];
 
 export const getGhoReserve = (reserves: ComputedReserveData[]) => {

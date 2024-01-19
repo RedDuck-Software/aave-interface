@@ -112,6 +112,18 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
     ratesHistoryApiUrl: 'https://aave-api-v2.aave.com/data/rates-history',
     networkLogoPath: '/icons/networks/ethereum.svg',
   },
+  [31337]: {
+    name: 'My test sepolia fork',
+    publicJsonRPCUrl: ['http://localhost:8545'],
+    // publicJsonRPCWSUrl: 'wss://polygon-mumbai.g.alchemy.com/v2/demo',
+    // protocolDataUrl: 'https://api.thegraph.com/subgraphs/name/aave/aave-v2-polygon-mumbai',
+    baseAssetSymbol: 'ETH',
+    wrappedBaseAssetSymbol: 'WETH',
+    baseAssetDecimals: 18,
+    explorerLink: 'https://sepolia.scrollscan.dev',
+    isTestnet: true,
+    networkLogoPath: '/icons/networks/scroll.svg',
+  },
   [ChainId.polygon]: {
     name: 'Polygon POS',
     displayName: 'Polygon',

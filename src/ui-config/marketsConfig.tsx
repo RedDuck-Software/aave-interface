@@ -108,6 +108,7 @@ export enum CustomMarket {
   proto_mumbai = 'proto_mumbai',
   amm_mainnet = 'amm_mainnet',
   proto_goerli = 'proto_goerli',
+  my_test_sepolia = 'my_test_sepolia',
   // external
   // permissioned_market = 'permissioned_market',
 }
@@ -145,6 +146,36 @@ export const marketsData: {
       GHO_UI_DATA_PROVIDER: AaveV3Ethereum.UI_GHO_DATA_PROVIDER,
       WITHDRAW_SWITCH_ADAPTER: AaveV3Ethereum.WITHDRAW_SWAP_ADAPTER,
       DEBT_SWITCH_ADAPTER: AaveV3Ethereum.DEBT_SWAP_ADAPTER,
+    },
+    halIntegration: {
+      URL: 'https://app.hal.xyz/recipes/aave-v3-track-health-factor',
+      marketName: 'aavev3',
+    },
+  },
+  [CustomMarket.my_test_sepolia]: {
+    marketTitle: 'My test sepolia',
+    market: CustomMarket.my_test_sepolia,
+    chainId: 31337,
+    v3: true,
+    enabledFeatures: {
+      // governance: true,
+      // staking: true,
+      // liquiditySwap: true,
+      // collateralRepay: true,
+      // incentives: true,
+      faucet: true,
+    },
+    // subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/protocol-v3',
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: '0xe9338514574b0925efAfD1FAbc1dD21658582a4b',
+      LENDING_POOL: '0xCd649FEDCd6B7bEFfeb8A6f39844f652F0EaDcd3',
+      WETH_GATEWAY: '0x2f664beeB023A88C6f083A68B09c9851A12e18f4',
+      FAUCET: '0xe97e85e2E90bC784551efe006187D0721667F344',
+      WALLET_BALANCE_PROVIDER: '0x5804Ac9f44A540aEFb39F13C68d2444367628837',
+      UI_POOL_DATA_PROVIDER: '0x609b1Ac354499d22489e08b90229c7Be1bEeD599',
+      UI_INCENTIVE_DATA_PROVIDER: '0x91DEf2cD0Aae9eeBb9a744D41cac4905157457B7',
+      GHO_TOKEN_ADDRESS: '0x288250CF9A37cddcB130B7151145CA1269AC8c0d',
+      GHO_UI_DATA_PROVIDER: '0x4967C7fC62BAF44a83F0585c2106E906D6B8de26',
     },
     halIntegration: {
       URL: 'https://app.hal.xyz/recipes/aave-v3-track-health-factor',

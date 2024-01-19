@@ -74,6 +74,10 @@ export const SupplyAssetsListItem = ({
     setAnchorEl(null);
   };
 
+  if (!isActive) {
+    return <></>;
+  }
+
   return (
     <ListItemWrapper
       symbol={symbol}
